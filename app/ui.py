@@ -58,7 +58,8 @@ class UserAddWindow(BaseEditWindow):
             label=u'последний вход',
             name='last_login',
             allow_blank=True,
-            anchor='100%')
+            anchor='100%',
+            format = 'd.m.Y')
         
         self.field_super = ext.ExtCheckBox(
             label=u'супер пользователь',
@@ -106,7 +107,8 @@ class UserAddWindow(BaseEditWindow):
             label=u'дата создания',
             name='date_joined',
             allow_blank=False,
-            anchor='100%')
+            anchor='100%',
+            format = 'd.m.Y')
 
     def _do_layout(self):
         super(UserAddWindow, self)._do_layout()
